@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <h1 class="app-title">Event Management System</h1>
+
+    <!-- Left side: Previous Events -->
+    <div class="events-panel">
+        <h3>Previous Events</h3>
+        <ul>
+            <li>AI Workshop – December 10 2025</li>
+            <li>Hackathon 2025 – December 15 2025</li>
+            <li>Cloud Computing Talk – December 22 2025</li>
+        </ul>
+    </div>
+
+    <!-- Center: Login -->
+    <div class="login-container">
+        <h2>Participant Login</h2>
+
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="note">
+            New participant? <a href="/register">Register here</a>
+        </p>
+    </div>
+
+    <!-- Right side: Upcoming Events -->
+    <div class="events-panel">
+        <h3>Upcoming Events</h3>
+
+        {% for e in events %}
+            <div class="event-card">
+                <a href="/event/{{ e[0] }}" class="event-name">
+                    {{ e[1] }}
+                </a>
+                <p>{{ e[2] }}</p>
+                <p>{{ e[3] }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

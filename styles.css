@@ -1,0 +1,174 @@
+/* ---------- Base Reset ---------- */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- Full Screen ---------- */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* ---------- Background ---------- */
+body {
+    background: linear-gradient(135deg, beige, burlywood);
+}
+
+/* ---------- Page Layout ---------- */
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px;
+}
+
+/* ---------- App Title ---------- */
+.page-wrapper h1,
+.app-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 32px;
+    color: black;
+    text-decoration: underline;
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+}
+
+/* ---------- Events Panels ---------- */
+.events-panel {
+    width: 25%;
+    min-width: 220px;
+
+    background-color: maroon;
+    padding: 20px;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 15px gray;
+}
+
+.events-panel h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: white;
+}
+
+/* ---------- Event Cards ---------- */
+.event-card {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.event-name {
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.event-card p {
+    margin: 2px 0;
+    font-size: 13px;
+    color: white;
+}
+
+.events-panel li
+{
+    color:blanchedalmond
+}
+
+/* ---------- Login Card ---------- */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: white;
+    padding: 32px;
+
+    border-radius: 18px;
+    box-shadow: 0 10px 20px gray;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* ---------- Form ---------- */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+    border: 2px solid black;
+    font-size: 14px;
+}
+
+/* ---------- Button ---------- */
+button {
+    width: 100%;
+    padding: 14px;
+
+    background-color: burlywood;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ---------- Messages ---------- */
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: gray;
+}
+
+.note a {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+
+/* ---------- Event Page Button ---------- */
+.event-link-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+
+    background-color: burlywood;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}

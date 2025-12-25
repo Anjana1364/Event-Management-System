@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h1 class="app-title">Event Management System</h1>
+
+<div class="login-container">
+    <h2>{{ event[1] }}</h2>
+
+    <p><strong>Date:</strong> {{ event[2] }}</p>
+    <p><strong>Location:</strong> {{ event[3] }}</p>
+
+    <p class="note">
+        Please login to register for this event.
+    </p>
+
+    <a href="/" class="event-link-btn">Go to Login</a>
+</div>
+
+</body>
+</html>
